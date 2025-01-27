@@ -1,0 +1,14 @@
+{{- $headless := site.GetPage "/headless" }}
+{{- with $headless.Resources.GetMatch .source }}
+    {{- $btnParams := dict "btnClass" "open-cv" "text" .Params.openBtn }}
+    {{ partial "common/button"  $btnParams }}
+    {{- if not (isset $ "btnOnly") }}
+    <dialog class="cv-dialog dialog">
+        <button class="dialog-btn__close" aria-label="Close dialog">╳</button>
+        <div class="cv-dialog__content">
+            <h2>{{ .Title }}</h2>
+            {{ .Content }}
+        </div>
+    </dialog>
+    {{- end }}
+{{- end }}

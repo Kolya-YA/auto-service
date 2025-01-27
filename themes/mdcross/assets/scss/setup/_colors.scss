@@ -1,0 +1,49 @@
+:root, ::backdrop {
+    // Main red color
+    --hue0: 51;
+    --main-red-100: oklch(70% 0.194 var(--hue0));
+    --main-red-200: oklch(60% 0.194 var(--hue0));
+    --main-red-300: oklch(55% 0.194 var(--hue0));
+    --main-red-400: oklch(50% 0.194 var(--hue0));
+
+    // Main Secondary color (1)
+    --hue1: 54;
+    --main-yellow-100: oklch(90% 0.139 var(--hue1));
+    --main-yellow-200: oklch(80% 0.139 var(--hue1));
+    --main-yellow-300: oklch(70% 0.139 var(--hue1));
+    --main-yellow-400: oklch(60% 0.139 var(--hue1));
+
+    // Main Secondary color (2)
+    --hue2: 196;
+    --main-blue-100: oklch(70% 0.06 var(--hue2));
+    --main-blue-200: oklch(60% 0.06 var(--hue2));
+    --main-blue-300: oklch(50% 0.06 var(--hue2));
+    --main-blue-400: oklch(40% 0.06 var(--hue2));
+
+
+    // Colors
+    --main-red: var(--main-red-400);
+    --main-red-tr: #bb191940;
+    --btn-grey: #618eab;
+    --blue: #0080ff;
+    --yellow: #f6d927;
+    --yellow-tr: #f6d92740;
+
+    --white: #ffffff;
+
+    --light-bgc: #fafafa;
+    --medium-bgc: #f2f2f2;
+    --dark-bgc: #1d1d1d;
+
+    --block-bg: #3332;
+
+    --dark-overlay-color: #1d1d1db0;
+
+    --main-text-color: #3b3b3b;
+    --light-text-color: #f2f2f2;
+    --light-text-color-tr: #f2f2f240;
+    --light-text-color-semitr: #f2f2f288;
+    --color-tr: #00000000;
+
+    --main-shadow: 0 0 10px -4px var(--main-blue-400);
+}

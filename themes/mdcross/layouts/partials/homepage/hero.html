@@ -1,0 +1,28 @@
+{{ $heroPhoto := resources.Get (.Params.HeroPhoto) }}
+<section class="hero">
+    <div class="hero__content">
+        {{- with .Params.Greeting }}
+        <div class="hero__content-greeting">{{ . }}</div>
+        {{- end }}
+        <div class="hero__content-text">
+            {{- with .Title }}
+            <h2 class="hero__content-title">{{ . }}</h2>
+            {{- end }}
+            {{ .Content }}
+        </div>
+        {{- with site.Params.TerminLink }}
+            <a  class="link-btn" href="{{ . }}" target="_blank" rel="noopener noreferrer">Termin vereinbaren</a><br>
+        {{- end }}
+    </div>
+    <div class="hero__photo">
+        {{- with $heroPhoto }}
+        {{- $img := .Resize "420x webp q80" }}
+        <img
+            src="{{ $img.RelPermalink }}"
+            width="{{ $img.Width }}"
+            height="{{ $img.Height }}"
+            alt="{{ $.Site.Params.Name }}"
+            >
+        {{- end }}
+    </div>
+</section>

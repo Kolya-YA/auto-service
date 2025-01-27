@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main>
+    <div class="width-wrapper">
+        <div class="index__top">
+            {{ partial "homepage/open" . }}
+            {{ partial "homepage/hero" . }}
+        </div>
+    </div>
+
+    <div class="width-wrapper">
+        <div class="index__bottom">
+            {{- partial "homepage/contacts" . -}}
+            {{- partial "homepage/info" . -}}
+        </div>
+    </div>
+</main>
+{{ end }}

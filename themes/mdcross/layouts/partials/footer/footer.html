@@ -1,0 +1,39 @@
+<footer class="footer">
+    <div class="footer__top">
+        <div class="width-wrapper">
+            <div class="footer__top-inner">
+                <div class="footer__service">
+                    <h3 class="footer__service-name">{{ .Site.Params.Name }}</h3>
+                    <h4 class="footer__service-dscr">{{ .Site.Params.Descr }}</h4>
+
+        {{- with site.Params.Cv }}
+        {{ partial "common/cv-modal" (dict "source" .) }}
+    {{- end }}
+                    <ul class="footer__service-list">
+                        {{- range .Site.Params.MainService }}
+                        <li class="footer__service-item">{{ . }}</li>
+                        {{- end }}
+                    </ul>
+                </div>
+
+                <div class="footer__address">
+                    <p>
+                        {{- range $i, $adr_str := .Site.Params.Address }}
+                        {{ $adr_str | markdownify }}<br>
+                        {{- end }}
+                    </p>
+                    {{ with site.Params.MapDirections }}
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Anfahrt mit googlemaps</a>
+                    {{ end }}
+                    <p>
+                        Tel: {{ .Site.Params.Phone }}<br>
+                        EMail: {{ .Site.Params.Email }}
+                    </p>
+                    {{- $dialogOpt := (dict "source" "cform.md" "btnOnly" true) }}
+                    {{ partial "common/form-modal" $dialogOpt }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ partial "footer/footer-legal" . }}
+</footer>

@@ -1,0 +1,9 @@
+.form-dialog {
+    
+    &__content {
+        max-height: calc(100vh - var(--main-gap) * 2);
+        overflow-y: auto;
+        padding: var(--main-gap);
+        background: var(--medium-bgc);
+    }
+}

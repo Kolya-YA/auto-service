@@ -1,0 +1,12 @@
+.header {
+    background-color: #eee;
+    text-align: end;
+
+    .header__name {
+        font-size: calc(clamp(1.6rem, 0.8rem + 2.5vw, 3rem));
+    }
+
+    .header__descr {
+        font-size: calc(clamp(1.4rem, 0.5rem + 2.2vw, 2.5rem));
+    }
+}

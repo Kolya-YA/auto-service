@@ -1,0 +1,18 @@
+<details 
+    class="info__details"
+    {{- if eq (.Get 1) "open"}}
+        data-visible="true"
+        open
+    {{- end }}
+    >
+    <summary class="info__summary">
+        {{- with .Get 0 }}
+            <h3>{{ . | markdownify }}</h3>
+        {{- end }}
+    </summary>
+    <div class="info__details-content">
+        <div>
+            {{ .Inner | markdownify }}
+        </div>
+    </div>
+</details>

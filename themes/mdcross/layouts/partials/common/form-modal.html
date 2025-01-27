@@ -1,0 +1,44 @@
+{{- $headless := site.GetPage "/headless" }}
+{{- with $headless.Resources.GetMatch .source }}
+    {{- $btnParams := dict "btnClass" "open-form" "text" .Params.openBtn }}
+    {{ partial "common/button"  $btnParams }}
+    {{- if not (isset $ "btnOnly") }}
+        <dialog class="form-dialog dialog">
+            <button class="dialog-btn__close">╳</button>
+            <div class="form-dialog__content">
+                <h2 id="title">{{ .Title }}</h2>
+                {{ .Content }}
+                <form action="" class="cform">
+                    {{ with .Params.subtitle -}}
+                    <h3 class="cform__header">{{ . }}</h3>
+                    {{- end }}
+                    <label class="cform__label">
+                        Name<span>*</span>
+                        <input type="text" name="" class="cform__input" required>
+                    </label>
+                    <label class="cform__label">
+                        Email<span>*</span>
+                        <input type="email" name="" class="cform__input" required>
+                    </label>
+                    <label class="cform__label">
+                        Telefonnummer
+                        <input type="tel" name="" class="cform__input">
+                    </label>
+                    <label class="cform__label">
+                        Nachricht<span>*</span>
+                        <textarea name="" cols="30" rows="10" class="cform__input" required>
+                        </textarea>
+                    </label>
+                    <label class="cform__label">
+                        <input type="checkbox" name="" class="cform__chk-input">
+                        Ich stimme der erste Option zu.
+                    </label>
+                    <div class="cform__btns">
+                        <button class="cform__submit button">Senden</button>
+                        <button type="reset" class="button">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+    {{- end }}
+{{- end }}

@@ -1,0 +1,6 @@
+{{ $headless := .Site.GetPage "/headless" }}
+{{ with $headless.Resources.GetMatch "info*" }}
+<div class="info index__bottom-info">
+    {{ .Content }}
+</div>
+{{ end }}

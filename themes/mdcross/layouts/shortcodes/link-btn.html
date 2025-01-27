@@ -1,0 +1,7 @@
+<a class="link-btn
+{{- with .Get "style" }} link-btn--{{ . }} {{ end }}"
+{{- with .Get "href" }}href="{{ . }}"{{ end }}
+{{- if eq (.Get "ext") "true" }}target="_blank" rel="noopener noreferrer"{{ end -}}
+>
+    {{- .Inner | markdownify -}}
+</a>

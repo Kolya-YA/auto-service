@@ -1,0 +1,16 @@
+<div class="footer__legal">
+    <div class="width-wrapper">
+        <div class="footer__legal-inner">
+            <ul class="footer__legal-list">
+                {{- range .Site.Menus.legal }}
+                <li class="footer__legal-item">
+                    <a href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{- end }}
+            </ul>
+            <div class="footer__legal-copyright">
+                Design & Umsetzung: <a href="https://plus360.eu/" target="_blank">WebStrom & plus360</a>
+            </div>
+        </div>
+    </div>
+</div>

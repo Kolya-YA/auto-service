@@ -1,0 +1,46 @@
+.contacts {
+
+    .contacts__flex {
+        display: flex;
+        flex-direction: column;
+        gap: var(--block-gap);
+        // gap: 1vw;
+        
+        > * {
+            flex: 1;
+            padding: var(--main-gap);
+            background: var(--block-bg);
+            border-radius: calc(var(--main-gap) / 3);
+        }
+
+        .contacts__eadr {
+            
+            a + button {
+                margin-block-start: var(--main-gap);
+            }
+        }
+
+        .contacts__map {
+            position: relative;
+            display: grid;
+            place-content: center;
+            aspect-ratio: 5/3;
+            padding: 0;
+            overflow: hidden;
+            // background-color: var(--main-red-100);
+
+            &-attribution {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: inline-block;
+                padding-inline: 1em;
+                font-size: 14px;
+                line-height: 1.5;
+                color: inherit;
+                background: #fff6;
+                border-top-left-radius: var(--border-radius);
+                       }
+        }
+    }
+}

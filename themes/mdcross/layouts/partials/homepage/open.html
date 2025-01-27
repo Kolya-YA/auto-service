@@ -1,0 +1,33 @@
+{{ $headless := .Site.GetPage "/headless" }}
+{{- with $headless.Resources.GetMatch "open*" }}
+<section class="open">
+    <h2 class="open__title">{{ .Title }}</h2>
+    {{- with .Params.Days }}
+    <ul class="open__list">
+        {{- range first 7 . }}
+        {{- if gt (. | len) 1 }}
+        <li  class="open__item">
+            <div class="open__item-card">
+                <div class="open__item-day--long">{{ index . 0 }}</div>
+                <div class="open__item-day--small">{{ slicestr (index . 0) 0 2 }}</div>
+                <div class="open__item-time">
+                    {{- range (index . 1) }}
+                    <div class="open__item-line">
+                        {{- if gt ( . | len )  0 }}
+                            {{ printf "%02d – %02d" (index . 0) (index . 1) }}
+                            {{/*  {{ index . 0 }} – {{ index . 1 }}  */}}
+                        {{- else }}
+                            –
+                            {{- end }}
+                    </div>
+                    {{- end }}
+                </div>
+            </div>
+        </li>
+        {{- end }}
+        {{- end }}
+    </ul>
+    {{- end }}
+    {{ .Content }}
+</section>
+{{- end }}

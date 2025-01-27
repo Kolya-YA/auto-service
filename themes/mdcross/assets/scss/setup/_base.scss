@@ -1,0 +1,120 @@
+:root {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 360px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+    font-family: var(--common-font-family);
+    font-size: var(--common-font-size);
+    line-height: 1.5em;
+    // background-color: var(--body-bg-color);
+    background-image: var(--body-bg-img);
+    color: var(--main-text-color);
+}
+
+h1 {
+    font-family: var(--header-font-family);
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 400;
+    letter-spacing: -1px;
+    color: #333a;
+}
+
+h3 {
+    // font-family: var(--header-font-family);
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+
+h4, b, strong {
+    font-weight: 600;
+}
+
+a {
+    word-break: break-all;
+}
+
+a:not([class]) {
+    color: inherit;
+    text-decoration:  dotted 2px underline var(--main-blue-200);
+    text-decoration-skip-ink: none;
+    text-underline-offset: 3px;
+    transition: color 400ms ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+        color: var(--main-blue-200);
+    }
+}
+
+::marker {
+    color: var(--main-blue-200)
+}
+
+.width-wrapper {
+    width: calc(min(1280px, 100vw));
+    min-width: 360px;
+    margin: 0 auto;
+    padding-inline: var(--main-gap);
+}
+
+.page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--block-gap);
+
+    & > main {
+        flex: 6 0 280px;
+    }
+
+    & > aside {
+        flex: 1 0 280px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--main-gap);
+    }
+}
+
+.accent-text {
+    color: var(--main-red);
+}
+
+.svg-icons {
+    display: none;
+}
+
+.main__back-btn {
+    display: inline-block;
+    margin-block: var(--main-gap);
+    padding-block: calc(var(--main-gap) / 2);
+    padding-inline: calc(var(--main-gap));
+    background-color: #333b;
+    border-radius: var(--border-radius);
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    transition: color 300ms ease-in-out, background-color 300ms ease-in-out;;
+    
+    &:hover,
+    &:focus-visible {
+        color: var(--main-blue-100);
+        background-color: #333e;
+    }
+}

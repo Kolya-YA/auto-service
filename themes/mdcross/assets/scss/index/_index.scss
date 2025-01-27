@@ -1,0 +1,21 @@
+.index__top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+    margin-block-end: var(--section-gap);
+}
+
+.index__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--block-gap);
+    margin-block-end: var(--section-gap);
+
+    .index__bottom-contacts {
+        flex: 1 0 340px;
+    }
+
+    .index__bottom-info {
+        flex: 5 0 340px;
+    }
+}

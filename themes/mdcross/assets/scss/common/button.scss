@@ -1,0 +1,35 @@
+.button,
+.link-btn {
+    display: inline-block;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: .5em 2em;
+    font: inherit;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--main-blue-200);
+    border: 2px solid var(--main-blue-100);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 5%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        inset: 0;
+        margin: auto;
+        background-color: var(--main-blue-400);
+        opacity: 0;
+        transition: scale 300ms ease, opacity 200ms 300ms;
+    }
+    
+    &:is(:hover, :focus-visible):before {
+        opacity: 1;
+        scale: 40;
+        transition: scale 400ms 200ms ease, opacity 200ms;
+    }
+}

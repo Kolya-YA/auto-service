@@ -1,0 +1,58 @@
+baseURL = 'http://example.org/'
+defaultContentLanguage = 'de'
+title = 'Auto Service Site'
+theme = "mdcross"
+
+disableKinds = ["taxonomy", "term"]
+
+[params]
+    logoName = "Logo name"
+    email = "dr-auto@auto-master.de"
+    phone = "030 222333222"
+    address = [
+        "**Autoservice Super Plus**",
+        " Haupt Str. 222A",
+        "10222 Berlin",
+        "*Parken: Tiefgarage Other Str. 4B (2 St. kostenlos)*"
+    ]
+    mapDirections = "https://www.google.com/maps/place/S%2BU+Potsdamer+Platz/@52.5105567,13.3779718,17z/data=!4m6!3m5!1s0x47a851ceb3a1c0c1:0x61d7d2f718e9f49e!8m2!3d52.5094625!4d13.3788177!16s%2Fg%2F120lwv0x?entry=ttu"
+    mainService = [
+        "Super Service #1",
+        "Super Service #2",
+        "Super Service #3",
+        "Super Service #4",
+        "Super Service #5",
+        "Super Service #6",
+    ]
+    # cv = "cv.md"
+    terminLink = "https://www.doctolib.de/praktischer-arzt/berlin/anna-koreschkow-berlin"
+        
+    [params.social]
+        [params.social.in]
+            name = "LinkedIn"
+            link = ""
+            iconName = "linkedin"
+        [params.social.fb]
+            name = "Facebook"
+            link = ""
+            iconName = "facebook"
+        [params.social.instagram]
+            name = "Instagram"
+            link = ""
+            iconName = "instagram"  
+
+[languages]
+    [languages.de]
+        contentDir = 'content/de'
+        [languages.de.params]
+            name = "Autoservice Super Plus"
+            descr = "Reparatur und Wartung Ihres Lieblingsautos"
+            [languages.de.menu]
+                [[languages.de.menu.legal]]
+                    name = "Impressum"
+                    weight = 10
+                    url = "/impressum/"
+                [[languages.de.menu.legal]]
+                    name = "Datenschutz"
+                    weight = 20
+                    url = "/datenschutz/"

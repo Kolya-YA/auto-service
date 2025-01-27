@@ -1,0 +1,38 @@
+.cv-dialog {
+    
+    &__content {
+        max-height: calc(100vh - var(--main-gap) * 2);
+        overflow-y: auto;
+        padding: var(--main-gap);
+        background: var(--medium-bgc);
+
+        h2 {
+            margin-block: 1.5rem 3rem;
+            font-family: var(--header-font-family);
+            font-size: 3rem;
+            color: var(--main-blue-300);
+            text-transform: uppercase;
+            letter-spacing: .2em;
+        }
+
+        h3 {
+            width: max-content;
+            max-width: 100%;
+            border-bottom: 4px solid var(--main-blue-200);
+        }
+        
+        h4 {
+            font-family: var(--header-font-family);
+            color: var(--main-yellow-400);
+            margin-block: 1rem 0;
+        }
+        
+        p {
+            margin: 0;
+            
+            & + p {
+                margin-block: 1em;
+            }
+        }
+    }
+}
