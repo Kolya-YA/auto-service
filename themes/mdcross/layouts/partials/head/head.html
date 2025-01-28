@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>🛑 Change me</title>
+    <title> {{ site.Params.Descr }} | {{ site.Params.Name }}</title>
     
     <link rel="preload" href="{{ $styles.RelPermalink }}" as="style">
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">  
     
-    <meta property="og:title" content="🛑 Change me">
-    <meta name="description" content="🛑 Change me (up to ~155 characters)">
-    <meta property="og:description" content="🛑 Change me (up to ~155 characters)">
+    <meta property="og:title" content="{{ site.Params.Name }}">
+    <meta name="description" content="{{ site.Params.Descr }}">
+    <meta property="og:description" content="{{ site.Params.Descr }}">
     <meta property="og:image" content="https://">
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">

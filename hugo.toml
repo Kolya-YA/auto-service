@@ -26,7 +26,7 @@ disableKinds = ["taxonomy", "term"]
     # cv = "cv.md"
     # contactForm = false
 
-    terminLink = "https://www.doctolib.de/praktischer-arzt/berlin/anna-koreschkow-berlin"
+    # terminLink = ""
         
     [params.social]
         [params.social.in]
