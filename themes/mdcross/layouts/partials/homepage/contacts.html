@@ -3,7 +3,10 @@
         <div class="contacts__eadr">
             Tel: <a href="tel:{{ site.Params.Phone }}">{{ site.Params.Phone }}</a><br>
             EMail: <a href="mailto:{{ site.Params.Email }}">{{ site.Params.Email }}</a>
-            {{ partial "common/form-modal" (dict "source" "cform.md") }}
+            {{ if site.Params.ContactForm }}
+                {{- $dialogOpt := (dict "source" "cform.md") }}
+                {{ partial "common/form-modal" $dialogOpt }}
+            {{ end }}
         </div>
         <div class="contacts__postal">
             {{- range $i, $adr_str := site.Params.Address }}
@@ -23,4 +26,3 @@
         </div>
     </div>
 </section>
-<a href="http://" target="_blank" rel="noopener noreferrer"></a>

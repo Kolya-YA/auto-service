@@ -1,6 +1,6 @@
 baseURL = 'http://example.org/'
 defaultContentLanguage = 'de'
-title = 'Auto Service Site'
+title = 'DPF Service Mobil'
 theme = "mdcross"
 
 disableKinds = ["taxonomy", "term"]
@@ -17,14 +17,15 @@ disableKinds = ["taxonomy", "term"]
     ]
     mapDirections = "https://www.google.com/maps/place/S%2BU+Potsdamer+Platz/@52.5105567,13.3779718,17z/data=!4m6!3m5!1s0x47a851ceb3a1c0c1:0x61d7d2f718e9f49e!8m2!3d52.5094625!4d13.3788177!16s%2Fg%2F120lwv0x?entry=ttu"
     mainService = [
-        "Super Service #1",
-        "Super Service #2",
-        "Super Service #3",
-        "Super Service #4",
-        "Super Service #5",
-        "Super Service #6",
+        "DPF Reinigung",
+        "AdBlue Diagnose",
+        "Fahrzeugdiagnose",
+        "Service #4",
+        "Service #5",
     ]
     # cv = "cv.md"
+    # contactForm = false
+
     terminLink = "https://www.doctolib.de/praktischer-arzt/berlin/anna-koreschkow-berlin"
         
     [params.social]
@@ -45,8 +46,8 @@ disableKinds = ["taxonomy", "term"]
     [languages.de]
         contentDir = 'content/de'
         [languages.de.params]
-            name = "Autoservice Super Plus"
-            descr = "Reparatur und Wartung Ihres Lieblingsautos"
+            name = "DPF Service Mobil"
+            descr = "Reinigung von Dieselpartikelfilter (DPF) und Adblue-Anlage"
             [languages.de.menu]
                 [[languages.de.menu.legal]]
                     name = "Impressum"

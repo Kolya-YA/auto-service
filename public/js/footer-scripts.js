@@ -1,5 +1,5 @@
 (() => {
-  // ns-hugo-imp:/Users/kolya_ya/dev/Hugo-One/md-AnnaK/themes/mdcross/assets/js/modules/back-to-top.ts
+  // ns-hugo-imp:/Users/kolya_ya/dev/Hugo-One/md-AutoService/themes/mdcross/assets/js/modules/back-to-top.ts
   var btnBTT = document.querySelector(".back-to-top");
   if (btnBTT) {
     window.addEventListener("scroll", () => {
@@ -14,7 +14,7 @@
     });
   }
 
-  // ns-hugo-imp:/Users/kolya_ya/dev/Hugo-One/md-AnnaK/themes/mdcross/assets/js/modules/info-details.ts
+  // ns-hugo-imp:/Users/kolya_ya/dev/Hugo-One/md-AutoService/themes/mdcross/assets/js/modules/info-details.ts
   console.log("Info Details");
   var infoDetails = document.querySelectorAll(".info__details");
   infoDetails.forEach((iD) => {
@@ -32,7 +32,7 @@
     });
   });
 
-  // ns-hugo-imp:/Users/kolya_ya/dev/Hugo-One/md-AnnaK/themes/mdcross/assets/js/modules/cv-dialog.ts
+  // ns-hugo-imp:/Users/kolya_ya/dev/Hugo-One/md-AutoService/themes/mdcross/assets/js/modules/cv-dialog.ts
   var openCvBtns = document.querySelectorAll(".open-cv");
   var cvDialog = document.querySelector(".cv-dialog");
   var closeCvBtn = cvDialog.querySelector(".dialog-btn__close");
@@ -54,7 +54,7 @@
     document.body.style.overflow = "auto";
   }, false);
 
-  // ns-hugo-imp:/Users/kolya_ya/dev/Hugo-One/md-AnnaK/themes/mdcross/assets/js/modules/form-dialog.ts
+  // ns-hugo-imp:/Users/kolya_ya/dev/Hugo-One/md-AutoService/themes/mdcross/assets/js/modules/form-dialog.ts
   var openFormBtns = document.querySelectorAll(".open-form");
   var formDialog = document.querySelector(".form-dialog");
   var closeFormBtn = formDialog.querySelector(".dialog-btn__close");

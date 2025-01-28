@@ -1,15 +1,13 @@
 ---
 date: "2023-01-01"
 greeting: "Herzlich willkommen"
-title: "Ihr Auto-Service in Berlin"
-heroPhoto: "images/auto-service.webp"
+title: "DPF Service Mobil"
+heroPhoto: "images/volvo.jpeg"
 ---
 
-### Auto-Service Plus
-
-- Service #1
-- Service #2
-- Service #3
+- DPF Reinigung
+- AdBlue Diagnose
+- Fahrzeugdiagnose
 - Service #4
 - Service #5
 

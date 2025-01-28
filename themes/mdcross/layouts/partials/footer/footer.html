@@ -3,14 +3,14 @@
         <div class="width-wrapper">
             <div class="footer__top-inner">
                 <div class="footer__service">
-                    <h3 class="footer__service-name">{{ .Site.Params.Name }}</h3>
-                    <h4 class="footer__service-dscr">{{ .Site.Params.Descr }}</h4>
+                    <h3 class="footer__service-name">{{ site.Params.Name }}</h3>
+                    <h4 class="footer__service-dscr">{{ site.Params.Descr }}</h4>
 
         {{- with site.Params.Cv }}
         {{ partial "common/cv-modal" (dict "source" .) }}
     {{- end }}
                     <ul class="footer__service-list">
-                        {{- range .Site.Params.MainService }}
+                        {{- range site.Params.MainService }}
                         <li class="footer__service-item">{{ . }}</li>
                         {{- end }}
                     </ul>
@@ -18,7 +18,7 @@
 
                 <div class="footer__address">
                     <p>
-                        {{- range $i, $adr_str := .Site.Params.Address }}
+                        {{- range $i, $adr_str := site.Params.Address }}
                         {{ $adr_str | markdownify }}<br>
                         {{- end }}
                     </p>
@@ -26,11 +26,13 @@
                     <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Anfahrt mit googlemaps</a>
                     {{ end }}
                     <p>
-                        Tel: {{ .Site.Params.Phone }}<br>
-                        EMail: {{ .Site.Params.Email }}
+                        Tel: {{ site.Params.Phone }}<br>
+                        EMail: {{ site.Params.Email }}
                     </p>
-                    {{- $dialogOpt := (dict "source" "cform.md" "btnOnly" true) }}
-                    {{ partial "common/form-modal" $dialogOpt }}
+                    {{ if site.Params.ContactForm }}
+                        {{- $dialogOpt := (dict "source" "cform.md" "btnOnly" true) }}
+                        {{ partial "common/form-modal" $dialogOpt }}
+                    {{ end }}
                 </div>
             </div>
         </div>

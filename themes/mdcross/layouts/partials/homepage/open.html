@@ -15,9 +15,8 @@
                     <div class="open__item-line">
                         {{- if gt ( . | len )  0 }}
                             {{ printf "%02d – %02d" (index . 0) (index . 1) }}
-                            {{/*  {{ index . 0 }} – {{ index . 1 }}  */}}
-                        {{- else }}
-                            –
+                        {{/*  {{- else }}
+                            –  */}}
                             {{- end }}
                     </div>
                     {{- end }}
