@@ -1,3 +1,4 @@
+{{ $mapImage := resources.Get (site.Params.mapImage) }}
 <section class="contacts index__bottom-contacts">
     <div class="contacts__flex">
         <div class="contacts__eadr">
@@ -17,7 +18,7 @@
             {{ end }}
         </div>
         <div class="contacts__map">
-            <img src="" alt="Karte, wie Sie uns finden.">            
+            <img src="{{ $mapImage.RelPermalink }}" alt="Karte, wie Sie uns finden.">
             <a  class="contacts__map-attribution"
                 href="https://www.openstreetmap.org/copyright"
                 target="_blank" rel="noopener noreferrer">

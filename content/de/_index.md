@@ -1,14 +1,15 @@
 ---
-date: "2023-01-01"
+date: "2025-01-01"
 greeting: "Herzlich willkommen"
-title: "DPF Service Mobil"
+title: "Auto Service Super Plus"
 heroPhoto: "images/volvo.jpeg"
 ---
 
-- DPF Reinigung
-- AdBlue Diagnose
-- Fahrzeugdiagnose
-- Service #4
-- Service #5
+- Inspektion & Wartung
+- HU/AU (Hauptuntersuchung & Abgasuntersuchung)
+- Ölwechsel & Filterwechsel
+- Reifenservice & Achsvermessung
+- Bremsenservice
+- Karosserie- & Lackarbeiten
 
 **Auto-Service** Autoservice am Podstamer Platz
