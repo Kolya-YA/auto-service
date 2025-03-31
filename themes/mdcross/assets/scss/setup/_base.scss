@@ -63,6 +63,11 @@ a:not([class]) {
     }
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 ::marker {
     color: var(--main-blue-200)
 }
